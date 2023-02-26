@@ -1,29 +1,42 @@
 "use strict";
-let num = 15;
 
-function calcCube(meaning){
+// let num = 111;
+// function getTimeFromMinutes(minutes){
+// 	if(minutes < 0 || typeof(minutes) != 'number'){
+// 		return console.log('Ошибка, проверьте данные');
+// 	}
+// 		let result = '';
+// 		let calc = minutes / 60;
+// 		calc = parseInt(calc);
+// 		let remainder = minutes % 60;
+// 		if(calc === 1){
+// 			result = `это ${calc} час и ${remainder} минут`
+// 			return console.log(result);
+// 		}else if(calc > 1 && calc < 5 ){
+// 			result = `это ${calc} часa и ${remainder} минут`
+// 			return console.log(result);
+// 		}
+// 		else{
+// 			result = `это ${calc} часов и ${remainder} минут`
+// 			return console.log(result);
+// 		}
+// }
+// getTimeFromMinutes(num);
+	
+		let first = 90,
+			 second = 40,
+			 third = 41,
+			 last = 4;
+	
 
-	if((typeof(meaning) != 'number' ) || (Number.isInteger(meaning) != true)){
-		return console.log('When calculating, an error occurred')
-	}else{
-		
-		let volume = `Объём куба ${meaning * meaning * meaning},`;
-		let square = `Площадь всей поверхности ${(meaning*meaning)*6}`
-		let result = `${volume} ${square}`;
-		return result;
+function findMaxNumber(a,b,c,d){
+	const arr = [a,b,c,d];
+	let max = arr[0];
+	for(let i = 0; i < arr.length; i++){
+		if(max < arr[i]){
+			max = arr[i]
+		}
 	}
+	return console.log(max);
 }
-
-console.log(calcCube(num));
-
-let numPlace = 36;
-function calcTrain(place){
-	if(place < 1 || place > 36 ){
-		return console.log('В этом вагоне нет таких мест');
-	}else if(typeof(place) != 'number' || !Number.isInteger(place)){
-		return console.log("Возникла ошибка") ;
-	}else{
-		return console.log(`ваше купэ по номеру ${Math.round(place/4)}`); 
-	}
-}
-calcTrain(numPlace);
+findMaxNumber(first,second, third,last);
