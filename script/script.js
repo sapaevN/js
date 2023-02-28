@@ -1,54 +1,45 @@
-// "use strict";
+"use strict";
 
-// const options = {
-// 	name: 'test',
-// 	width: 1024,
-// 	height: 1024,
-// 	colors: {
-// 		border: "black",
-// 		bg: "red"
-// 	},
-// 	makeTest: function (){
-// 		console.log("Test")
-// 	}
- 
+// const arr = [1,2,3,6,8];
+// const arrey = ["hello",'idsfhu']
+
+// const str = prompt("","")
+// const products = str.split(", ")
+// console.log(products.join('; '));
+// arr.push(10);
+
+// console.log(arr)
+// arr.pop()
+// console.log(arr)
+
+
+// for(let i = 0; i < arr.length; i++){
+// 	console.log(arr[i]);
 // }
-// const {border,bg} = options.colors;
-// console.log(border)
+
+// for ( let value of arr){
+// 	console.log(value)
+// }
 
 
+// arr.forEach(function(item, i,l) {
+// 	console.log(item)
+// 	console.log(l)
 
-
-// console.log(options);
-
-// delete options.name;
-// console.log(options)
-// let counter = 0;
-
-// for (let key in options){
-// 	if(typeof(options[key])==='object'){
-// 		for (let i in options[key] ){
-// 		console.log(` свойство ${i} имеет значения ${options[key][i]}`)
-		
-// 		}
-// 	}else{
-// 		console.log(` свойство ${key} имеет значения ${options[key]}`)
-// 		counter++
-// 	}
 	
-// }
-// console.log(counter)
+// });
 
-// console.log(Object.keys(options).length);
 
-// let counter = 0;
-// for (let key in options){
-// 	if(typeof(options[key] === 'object')){
-// 		for (let i in options[key]){
-// 			console.log(options[key][i])
-// 		}
-// 	}
-// 	 console.log(`key  ${key} - value ${options[key]}`);
-// 	counter++;
+// const someStr = "asasd, asadasd, asdasd, assadasd, as";
+// const products = someStr.split(', ') 
+// console.log(products);
+// console.log(products.join(""))
+
+// let arr = [ 3,2, 1, 33, 43545, 66, -123213, -2]
+// console.log(arr)
+// arr.sort(compareNum)
+// console.log(arr)
+
+// function compareNum(a,b){
+// 	return a-b;
 // }
-// console.log(`object options have ${counter} keys`)
