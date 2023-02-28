@@ -1,53 +1,61 @@
 "use strict";
 
-// const obj ={
-// 	a: 5,
-// 	b: 10
-// }
-// console.log(obj)
+const personalPlanPeter = {
+	name: "Peter",
+	age: "29",
+	skills: {
+		languages: ["ru, eng"],
+		programmingLangs:{
+			js: "20%",
+			php: "10%"
+		},
+		exp: "1 month"
+	},
+
+	showAgeAndLangs: function(plan){
+		let result = '';
+		let myAge = plan.age;
+		let knowLengs = plan.skills.languages;
+		result += `Мне ${myAge} я владею языками: ${knowLengs.join(" :::").toUpperCase()}`
+		return console.log(result);
+	}
+
+};
+
+personalPlanPeter.showAgeAndLangs(personalPlanPeter);
 
 
-// let newObj = Object.assign({},obj )
-// newObj.a = 79;
-// console.log(newObj)
+function showProgrammingLangs(plan){
+	for(let key in plan){
+		if(typeof(plan[key] === 'object')){
+			for (let i in plan[key]){
+				if(i == "programmingLangs" ){
+					for(let k in plan[key][i]){
+						if(k === "js"){
+							console.log(`Язык js изучен на ${plan[key][i][k]}`)
+						}
+						else if(k === "php"){
+							console.log(`Язык php изучен на ${plan[key][i][k]}`)
+						}else if(typeof(plan[key][i][k]) === 'undefined'){
+							console.log("")
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-// Object.assign(obj, newObj)
+function showExperience(plan){
+	for(let key in plan){
+		if(typeof(plan[key]) === "object"){
+			for(let i in plan[key]){
+				if(i == 'exp') {console.log(plan[key][i])}
+				
+			}
+		}
+	}
+}
 
-// console.log(globalObj)
-
-
-
-
-// function createObj(mainObj){
-// 	let objCopy = {};
-// 	for (let key in mainObj){
-// 		objCopy[key] = mainObj[key];
-// 	}
-// 	return objCopy
-// }
-
-// const newObj = createObj(obj);
-// newObj.a = 35;
-// console.log(newObj)
-
-
-
-
-
-// const num ={
-// 	experence: 10,
-// 	age: 35
-// }
-// const str ={
-// 	name: "Alex",
-// 	password:" 123123123asdsadasd"
-// }
-
-// const userInfo = Object.assign(str,num) 
-// console.log(userInfo)
-
-const oldArray = ["helllo", 213123,  "okiwpeofkw"];
-const newArr = [...oldArray]
-newArr.unshift("sdfdsfffffffffffffff") 
-console.log(oldArray)
-console.log(newArr)
+showExperience(personalPlanPeter);
+showProgrammingLangs(personalPlanPeter);
