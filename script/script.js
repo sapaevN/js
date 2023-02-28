@@ -1,45 +1,53 @@
 "use strict";
 
-// const arr = [1,2,3,6,8];
-// const arrey = ["hello",'idsfhu']
-
-// const str = prompt("","")
-// const products = str.split(", ")
-// console.log(products.join('; '));
-// arr.push(10);
-
-// console.log(arr)
-// arr.pop()
-// console.log(arr)
+// const obj ={
+// 	a: 5,
+// 	b: 10
+// }
+// console.log(obj)
 
 
-// for(let i = 0; i < arr.length; i++){
-// 	console.log(arr[i]);
+// let newObj = Object.assign({},obj )
+// newObj.a = 79;
+// console.log(newObj)
+
+// Object.assign(obj, newObj)
+
+// console.log(globalObj)
+
+
+
+
+// function createObj(mainObj){
+// 	let objCopy = {};
+// 	for (let key in mainObj){
+// 		objCopy[key] = mainObj[key];
+// 	}
+// 	return objCopy
 // }
 
-// for ( let value of arr){
-// 	console.log(value)
+// const newObj = createObj(obj);
+// newObj.a = 35;
+// console.log(newObj)
+
+
+
+
+
+// const num ={
+// 	experence: 10,
+// 	age: 35
+// }
+// const str ={
+// 	name: "Alex",
+// 	password:" 123123123asdsadasd"
 // }
 
+// const userInfo = Object.assign(str,num) 
+// console.log(userInfo)
 
-// arr.forEach(function(item, i,l) {
-// 	console.log(item)
-// 	console.log(l)
-
-	
-// });
-
-
-// const someStr = "asasd, asadasd, asdasd, assadasd, as";
-// const products = someStr.split(', ') 
-// console.log(products);
-// console.log(products.join(""))
-
-// let arr = [ 3,2, 1, 33, 43545, 66, -123213, -2]
-// console.log(arr)
-// arr.sort(compareNum)
-// console.log(arr)
-
-// function compareNum(a,b){
-// 	return a-b;
-// }
+const oldArray = ["helllo", 213123,  "okiwpeofkw"];
+const newArr = [...oldArray]
+newArr.unshift("sdfdsfffffffffffffff") 
+console.log(oldArray)
+console.log(newArr)
