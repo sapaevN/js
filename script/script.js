@@ -1,27 +1,34 @@
-"use strict"
-const family = ['Peter', 'Ann', 'Alex', 'Linda']
+"use strict";
 
-function showFamily(f){
-	let resultStr = '';
-	if(f.length == 0){
-		return console.log("Семья пуста");
-	}
-	else{
-		f.forEach(function(e, n, link){
-			resultStr += `${e} `;
-		});
-	}
-	return console.log(resultStr);
-}
-showFamily(family);
-const itemcities = ['LisBon', 'ROME', 'milan', 'DubLin'];
+// const someString = "heloooooooooooooo woooorld";
 
-function standardizStr(cities){
-	let showCities = '';
-	cities.forEach(function(k){
-		showCities += `${k} \n`;
+// function reverse(str){
+// 	let result = '' 
+// 	if(typeof(str) != 'string'){
+// 		return console.log( "Ошибка!")
+// 	}else{
+// 		for(let i = 0; i < str.length; i++){
+// 			result += str[str.length - 1 - i ]	
+// 		}
+// 		return console.log(result);	
+// 	}
+	
+// }
+// reverse(someString)
+const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+function availableCurr(arr, missingCurr) {
+	let result = "Доступные валюты\n";
+	if(arr.length === 0){
+		return console.log("Нет доступных валют.")
+	}
+	arr.forEach(function(item){
+		if(item !== missingCurr){
+			result += `${item}\n`;
+		};
 	});
-	return  console.log(showCities.toLowerCase());
+	return console.log(result);
 }
 
-standardizStr(itemcities);
+availableCurr([...baseCurrencies, ...additionalCurrencies], "UAH")
