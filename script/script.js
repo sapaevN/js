@@ -1,12 +1,21 @@
 "use strict";
-let num = 5;
-console.log("https://vk.com/catalog/" + num);
 
-const fontSize = 26 + "px";
 
-let switcher = null;
-
-if (switcher) {
-	console.log("working...")
+function counter() {
+	let count = 0;
+	return function () {
+		count++;
+		return count
+	}
 }
-console.log(!!0)
+
+const value = counter();
+console.log(value())
+console.log(value())
+console.log(value())
+console.log(value())
+console.log(value())
+console.log(value())
+
+
+
