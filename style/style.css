@@ -29,3 +29,13 @@
 .circle:not(:last-child){
 	margin-bottom: 10px;
 }
+
+.black{
+	background-color:black;
+	padding: 30px 20px;
+	color:#fff;
+	display: flex;
+	align-items:center;
+	justify-content: start;
+}
+
