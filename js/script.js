@@ -1,20 +1,49 @@
 "use strict";
-// console.log(document.documentElement)  
-// console.log(document.head)
-// console.log(document.body)
-// console.log(document.body.childNodes)
-//console.log(document.body.firstElementChild)
-// console.log(document.body.lastChild)
+document.addEventListener('DOMContentLoaded', () =>{
 
-// console.log(document.querySelector("h1").parentNode.parentElement);
-// console.log(document.querySelector('[data-first-item]').nextElementSibling );
-// console.log(document.querySelector('[data-first-item]').previousElementSibling);
+const num1 = document.querySelector("#num1");
+const num2 = document.querySelector("#num2");
+const addBtn = document.querySelector("#add");
+const subBtn = document.querySelector("#sub");
+const output = document.querySelector("#output");
+const division = document.querySelector('#division');
+const multipl = document.querySelector('#multipl');
 
-// for(let node of document.body.childNodes){
-//    if(node.nodeName == "#text"){
-//       continue;
-//    }
-//    else{
-//       console.log(node)
-//    }
-// }
+function resultOutput(result){
+   output.innerHTML = `Результат = ${result}`;
+}
+
+function getInputsValues() {
+   const value1 = +(num1.value);
+   const value2 = +(num2.value);
+   return [value1, value2];
+}
+
+function addHandler() {
+   const values = getInputsValues();
+   const result = values[0] + values[1];
+   resultOutput(result);
+}
+
+function subHandler() {
+   const values = getInputsValues();
+   const result = values[0] - values[1];
+   resultOutput(result);
+}
+function multiplHandler(){
+   const values = getInputsValues();
+   const result = values[0]*values[1];
+   resultOutput(result)
+}
+function divisionHandler(){
+   const values = getInputsValues();
+   const result = values[0]/values[1];
+   resultOutput(result)
+}
+
+addBtn.addEventListener('click', addHandler);
+subBtn.addEventListener('click', subHandler);
+multipl.addEventListener('click',multiplHandler);
+division.addEventListener('click',divisionHandler);
+
+});

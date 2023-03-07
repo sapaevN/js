@@ -4,23 +4,28 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>46. Навигация по DOM - элементам, data-атрибуты, преимущество for/of</title>
+	<title>calculator</title>
 	<link rel="stylesheet" href="css/style.css">
+	<script src="js/script.js"></script>
 </head>
 <body>
 <div class="wrapper"> 
-	<h1>46. Навигация по DOM - элементам, data-атрибуты, преимущество for/of</h1>
-</div>
-
-<ul class="list">
-	<li data-first-item ><a href="">item first 1</a></li>
-	<li><a href="">item 2</a></li>
-	<li><a href="">item 3</a></li>
-	<li><a href="">item 4</a></li>
-	<li><a href="">item 5</a></li>
-</ul>
-
-
-<script src="js/script.js"></script>
+	<section  class="calc">
+		<div class="calc__row">
+			<input type="number" placeholder="число 1" id="num1">
+		</div>
+		<div class="calc__row">
+			<input type="number" placeholder="число 2" id="num2">
+		</div>
+		<div class="calc__buttons">
+			<button class="calc__btn" id="add">+</button>
+			<button class="calc__btn" id="sub">-</button>
+			<button class="calc__btn" id="multipl">*</button>
+			<button class="calc__btn" id="division">/</button>
+		</div>
+		<div class="calc__result">
+			<h1 class="calc__title" id="output"></h1>
+		</div>
+	</section>
 </body>
 </html>
