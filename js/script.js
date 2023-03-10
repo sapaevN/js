@@ -1,8 +1,8 @@
 "use strict";
 
 
-const p = document.querySelectorAll('p');
-console.log(p)
+// const p = document.querySelectorAll('p');
+// console.log(p)
 
 function scriptLoaded(src){
    const script = document.createElement('script')
@@ -11,5 +11,5 @@ function scriptLoaded(src){
    document.body.append(script);
 }
 
-scriptLoaded("js/test.js")
+scriptLoaded("js/task.js")
 scriptLoaded("js/some.js")
